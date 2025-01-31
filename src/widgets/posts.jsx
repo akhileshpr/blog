@@ -111,7 +111,7 @@ const Posts = ({ isUser = false, searchQuery }) => {
             )}
           </Box>
 
-         {!posts && <Pagination
+         {posts && <Pagination
             count={totalPages}
             page={currentPage}
             onChange={handlePageChange}
