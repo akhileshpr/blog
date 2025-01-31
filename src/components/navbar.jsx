@@ -99,7 +99,7 @@ const Navbar = ({ setSearchQuery }) => {
               <MenuItem
                 onClick={() => {
                   dispatch(setLogout());
-                  navigate("/auth");
+                  navigate("/");
                 }}
               >
                 Log Out

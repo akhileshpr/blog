@@ -39,3 +39,6 @@ export const updateLikeApi=async(id,data,reqHeader)=>{
 export const postCommentApi=async(postId,id,reqBody,reqHeader)=>{
     return await commonAPI("POST",`${SERVER_URL}/add-comment/${postId}/${id}`,reqBody,reqHeader)
 }
+export const getCommentApi=async(postId,reqHeader)=>{
+    return await commonAPI("GET",`${SERVER_URL}/get-comment/${postId}`,"",reqHeader)
+}

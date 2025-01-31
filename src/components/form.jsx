@@ -108,7 +108,6 @@ const Form = () => {
         );
         navigate("/home");
       }
-      console.log(result);
     } catch (err) {}
   };
   const handleFormSubmit = async (values, onSubmitProps) => {

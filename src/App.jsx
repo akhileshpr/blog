@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/" element={<Auth />} />
         <Route path="/home" element={<Home />} />
         <Route path="/post/:postId" element={<Single />} />
         
