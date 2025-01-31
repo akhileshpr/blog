@@ -45,8 +45,15 @@ const BlogForm = ({ post, onClose }) => {
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required("Title is required"),
-    description: Yup.string().required("Description is required"),
+    description: Yup.string()
+      .required("Description is required")
+      .test(
+        "min-words",
+        "Description must be at least 50 words",
+        (value) => value && value.trim().split(/\s+/).length >= 50
+      ),
   });
+  
 
   const initialValues = {
     title: post?.title || "",
